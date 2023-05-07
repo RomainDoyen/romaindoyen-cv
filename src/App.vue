@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <home-vue msg="Romain Doyen" msg_p="CV personnel"/> 
-    <footer-vue msg="Réseau sociaux"/>
-    <button @click="scrollToTop" id="myBtn"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <home-vue msg="Romain Doyen" msgp="CV personnel"/> 
+    <footer-vue msg="Réseaux sociaux"/>
+    <button @click="scrollToTop" id="myBtn" v-show="scY > 300"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
   </div>
 </template>
 
@@ -16,7 +16,24 @@ export default {
     HomeVue,
     FooterVue
   },
+  data() {
+    return {
+      scTimer: 0,
+      scY: 0,
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
   methods: { 
+    handleScroll() {
+      if (this.scTimer) return;
+      this.scTimer = setTimeout(() => {
+        this.scY = window.scrollY;
+        clearTimeout(this.scTimer);
+        this.scTimer = 0;
+      }, 100);
+    },
     scrollToTop() {
       window.scrollTo(0,0);
     }
@@ -121,9 +138,6 @@ h1, h2, h3 {
     width: 100%;
     margin-bottom: 25px;
   }
-  div.box-article.art {
-    padding: 0;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -135,8 +149,4 @@ h1, h2, h3 {
     height: auto;
   }
 }
-
-/* #app {
-  
-} */
 </style>

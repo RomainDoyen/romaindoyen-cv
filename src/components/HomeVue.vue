@@ -2,12 +2,12 @@
   <div class="home--vue">
     <header>
       <div class="head-motion">
-        <img id="head-ban" src="../images/header.webp" />
+        <img id="head-ban" src="../assets/header.webp" />
       </div>
       <div class="head">
-        <img class="logo" src="../images/rd.webp" />
+        <img class="logo" src="../assets/rd.webp" />
         <h1>{{ msg }}</h1>
-        <p>{{ msg_p }}</p>
+        <p>{{ msgp }}</p>
       </div>
     </header>
 
@@ -32,17 +32,17 @@
 </template>
 
 <script>
-import IntroVue from './IntroVue.vue';
-import SkillsVue from "./SkillsVue.vue";
-import ExperimentsVue from "./ExperimentsVue.vue";
-import EducationVue from "./EducationVue.vue";
-import PortfolioVue from "./PortfolioVue.vue";
+import IntroVue from "../pages/IntroVue.vue";
+import SkillsVue from "../pages/SkillsVue.vue";
+import ExperimentsVue from "../pages/ExperimentsVue.vue";
+import EducationVue from "../pages/EducationVue.vue";
+import PortfolioVue from "../pages/PortfolioVue.vue";
 
 export default {
   name: "HomeVue",
   props: {
     msg: String,
-    msg_p: String,
+    msgp: String,
   },
   components: {
     IntroVue,
@@ -115,14 +115,6 @@ div.head p {
   padding: 20px;
   color: #c7a23a;
   font-style: italic;
-}
-
-.box-article {
-  background-color: #d1d1d1;
-  padding: 3em 4em;
-  margin: 15px;
-  border-radius: 10px;
-  display: grid;
 }
 
 .gh {

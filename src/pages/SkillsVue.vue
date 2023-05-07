@@ -1,10 +1,10 @@
 <template>
   <div class="articles">
-    <h2 id="competence">{{ msg }}</h2>
+    <h2 id="competence">👨🏻‍💻 {{ msg }}</h2>
     <div class="skills-bar">
       <div class="bar" v-for="(skill, i) in skills" :key="i">
         <div class="info">
-          <span><img v-bind:src="require(`@/images/${skill.icon}`)" /></span>
+          <span><img v-bind:src="require(`@/assets/${skill.icon}`)" /></span>
         </div>
         <div class="title"><span>{{ skill.title }}</span></div>
       </div>
@@ -33,8 +33,8 @@ export default {
         icon : 'javascript.webp',
       },
       {
-        title: 'PHP',
-        icon: 'php.webp',
+        title: 'Vue',
+        icon: 'vue.png',
       },
       {
         title: 'Photoshop',
@@ -61,8 +61,12 @@ export default {
         icon: 'wordpress.webp',
       },
       {
-        title: 'Android',
-        icon: 'android-studio.webp',
+        title: 'React',
+        icon: 'react.png',
+      },
+      {
+        title: 'Firebase',
+        icon: 'firebase.png',
       },
     ]
   })
@@ -76,6 +80,7 @@ h2 {
   padding: 0.6em 1em;
   border-radius: 50px;
 }
+
 .skills-bar {
   display: flex;
   justify-content: center;
@@ -83,12 +88,15 @@ h2 {
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
+
 .bar {
   padding: 40px;
 }
+
 .bar img {
-  width: 110px;
+  width: 100px;
 }
+
 .title {
   text-align: center;
   font-weight: 550;

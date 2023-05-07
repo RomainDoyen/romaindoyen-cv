@@ -1,6 +1,6 @@
 <template>
   <div class="articles">
-    <h2>{{ msg }}</h2>
+    <h2> 👨🏽‍🎓 {{ msg }}</h2>
     <div v-for="(post, i) in posts" :key="i">
       <div class="sous-articles">
         <div class="box-article">
@@ -8,7 +8,7 @@
         </div>
       </div>
       <div class="sous-articles">
-        <a href="/files/Romain_Doyen_CV.pdf" download="Romain_Doyen_CV.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;{{ post.cv }}</a>
+        <a href="/files/romain-doyen-cv.pdf" download="romain-doyen-cv.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;{{ post.cv }}</a>
       </div>
     </div>
   </div>
@@ -37,5 +37,11 @@ div.articles {
   width: 80%;
   margin-bottom: 30px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 1170px) {
+  div.articles {
+    width: 100%;
+  }
 }
 </style>

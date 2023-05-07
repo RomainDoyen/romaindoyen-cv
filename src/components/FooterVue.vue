@@ -4,7 +4,7 @@
         <div class="main" v-for="(footer, i) in footers" :key="i">
             <div class="footer">
                 <div class="single-footer">
-                    <h4>{{ msg }}</h4>
+                    <h4> 🙋🏽‍♂️ {{ msg }}</h4>
                     <div class="footer-social">
                         <a target="_blank" href="https://www.facebook.com/designandcreation39/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a target="_blank" href="https://github.com/RomainDoyen/"><i class="fa fa-github" aria-hidden="true"></i></a>
@@ -12,12 +12,12 @@
                     </div>
                 </div>
                 <div class="single-footer">
-                    <h4>{{ footer.subtitle }}</h4>
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;{{ footer.mail }}</p>
+                    <h4> 📨 {{ footer.subtitle }}</h4>
+                    <p>&nbsp;{{ footer.mail }}</p>
                 </div>
             </div>
             <div class="copy">
-                <p>&copy;{{ footer.cop_1 }}<span id="dac"><img id="dac-logo" src="../images/2.webp"/></span>{{ footer.cop_2 }}<a href="#">{{ footer.cgu }}</a></p>
+                <p>&copy; {{ footer.cop_1 }}<span id="dac"><img id="dac-logo" src="../assets/2.webp"/></span>{{ footer.cop_2 }}<a href="#">{{ footer.cgu }}</a></p>
             </div>
         </div>
     </footer>
@@ -35,18 +35,18 @@ export default {
             {
                 subtitle: 'Mail',
                 mail: 'romain.doyen39@gmail.com',
-                cop_1: 'Romain Doyen 2022 by ',
-                cop_2: ' | Tous droits réservés.',
+                cop_1: `Romain Doyen ${new Date().getFullYear()} by  `,
+                cop_2: ' Tous droits réservés.',
                 cgu: ' CGU'
             }
         ]
-    })
+    }),
 }
 </script>
 
 <style>
 .footer-area {
-    background-image: url('../images/footer.webp');
+    background-image: url('../assets/footer.webp');
     margin-top: 100px;
     padding: 100px 0;
     background-repeat: no-repeat;
@@ -84,9 +84,9 @@ export default {
   
 .footer-social a {
     color: #fff;
-    border: 1px solid #fff;
-    width: 40px;
-    height: 40px;
+    border: 2px solid #fff;
+    width: 41px;
+    height: 41px;
     display: inline-block;
     text-align: center;
     line-height: 40px;
