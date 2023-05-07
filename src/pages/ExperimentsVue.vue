@@ -38,12 +38,12 @@ export default {
         }
       },
       {
-        subtitle: 'Réparateur D\'électroménagers',
-        date: '2021-01 - 2021-01',
-        lieu: 'Electro-Dep, Saint-Anne, Il De La Réunion',
+        subtitle: 'Stage de développeur web backend',
+        date: '2022-02 - 2022-03',
+        lieu: 'Flaxib, Sainte-Clotilde, Il De La Réunion',
         description: {
-          point_1: '• Réparation quotidienne d\'appareil électroménager',
-          point_2: '• Localisation précise de la défaillance et identification de ses causes en démontant précautionneusement l\'appareil et en utilisant des outils de mesure et de diagnostic comme le multimètre.'
+          point_1: '• Stage développeur backend durant deux mois dans l\'entreprise Flaxib, SainteClotilde',
+          point_2: '• Stage de deux mois pour la création d\'une application web qui calcule les itinéraires optimal pour les transports scolaires'
         }
       },
     ]
@@ -70,6 +70,7 @@ export default {
 .timeline-item {
   width: 100%;
   margin-bottom: 70px;
+  margin-top: 25px;
 }
 
 .timeline-img {

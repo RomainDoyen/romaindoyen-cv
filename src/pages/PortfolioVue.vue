@@ -45,7 +45,7 @@ export default {
           id: '2',
           title: '☀️ Weather App (version Web)',
           description: 'Obtenir la météo par le biais d\'une API',
-          techno: 'Vue JS',
+          techno: 'Vue JS, OpenWeatherMap',
           img: 'weather-app.png',
           link: 'https://times-app.netlify.app/'
         },
@@ -53,8 +53,16 @@ export default {
           id: '3',
           title: '☀️ Weather App (version Mobile)',
           description: 'Obtenir la météo par le biais d\'une API',
-          techno: 'React Native',
+          techno: 'React Native, OpenWeatherMap',
           img: 'weather-app-phone.png',
+        },
+        {
+          id: '4',
+          title: '💫 Astrologie 23',
+          description: 'Projet réaliser dans le cadre scolaire',
+          techno: 'HTML, CSS, JS, JQUERY',
+          img: 'astrologie23.png',
+          link: 'https://vingt-trois.netlify.app/'
         },
       ],
   }),
