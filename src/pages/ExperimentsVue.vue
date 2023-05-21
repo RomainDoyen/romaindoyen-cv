@@ -1,21 +1,18 @@
 <template>
   <div class="articles">
     <h2 id="experience"> 👨🏽‍💼 {{ msg }}</h2>
-    <div v-for="(exp, i) in exps" :key="i">
-      <section class="timeline">
-        <div class="container">
-          <div class="timeline-item">
-            <div class="timeline-img"></div>
-            <div class="timeline-content js--fadeInLeft">
-              <h3>{{ exp.subtitle }}</h3>
-              <span class="date">{{ exp.date }}</span>
-              <h4>{{ exp.lieu }}</h4>
-              <p>{{ exp.description.point_1 }}</p>
-              <P>{{ exp.description.point_2 }}</P>
-            </div>
+    <div class="timeline">
+      <div v-for="event in events" :key="event.id" class="timeline-item">
+        <div class="timeline-content">
+          <h3>{{ event.subtitle }}</h3>
+          <div class="date-container">
+            <span class="date">{{ event.date }}</span>
           </div>
+          <h4>{{ event.lieu }}</h4>
+          <p>{{ event.description.point_1 }}</p>
+          <p>{{ event.description.point_2 }}</p>
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </template>
@@ -27,8 +24,9 @@ export default {
     msg: String
   },
   data: () => ({
-    exps: [
+    events: [
       {
+        id: 0,
         subtitle: '🔧 Réparateur D\'électroménagers',
         date: '2021-01 - 2021-01',
         lieu: 'Electro-Dep, Saint-Anne, Il De La Réunion',
@@ -38,6 +36,7 @@ export default {
         }
       },
       {
+        id: 1,
         subtitle: 'Stage de développeur web backend',
         date: '2022-02 - 2022-03',
         lieu: 'Flaxib, Sainte-Clotilde, Il De La Réunion',
@@ -53,78 +52,69 @@ export default {
 
 <style>
 .timeline {
+  margin-top: 30px;
   position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .timeline::before {
   content: "";
-  background: #C5CAE9;
-  width: 5px;
-  height: 95%;
   position: absolute;
+  top: 0;
   left: 50%;
-  border-radius: 10px;
+  width: 5px;
+  height: 100%;
+  background-color: #788bf4;
   transform: translateX(-50%);
 }
 
 .timeline-item {
-  width: 100%;
-  margin-bottom: 70px;
-  margin-top: 25px;
-}
-
-.timeline-img {
-  width: 30px;
-  height: 30px;
-  background: #3F51B5;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-top: 25px;
-  margin-left: -15px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .timeline-content {
   position: relative;
-  width: 45%;
-  padding: 10px 30px;
+  padding: 10px;
   border-radius: 4px;
+  line-height: 2rem;
   background: #f5f5f5;
-  box-shadow: 0 20px 25px -15px rgb(0 0 0 / 30%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.timeline-item::after {
+.timeline-content::before {
   content: "";
-  display: block;
-  clear: both;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #3F51B5;
+  transform: translateY(-50%);
+}
+
+.date-container {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 110px;
+  text-align: center;
 }
 
 .date {
-  background: #C7A23A;
   display: inline-block;
+  padding: 6px;
   border-radius: 4px;
-  color: #FFFFFF;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
+  background-color: #C7A23A;
+  color: #fff;
 }
 
-.timeline-content::after {
-  content: "";
-  position: absolute;
-  border-style: solid;
-  width: 0;
-  height: 0;
-  top: 30px;
-  right: -15px;
-  border-width: 10px 0 10px 15px;
-  border-color: transparent transparent transparent #f5f5f5;
-}
-
-.timeline-item::after {
-  content: "";
-  display: block;
-  clear: both;
+@media only screen and (max-width: 630px) {
+  .date-container {
+    display: none;
+  }
 }
 </style>

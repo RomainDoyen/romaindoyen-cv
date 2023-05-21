@@ -55,10 +55,15 @@ export default {
 
 <style>
 .contains {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 50px;
+  gap: 20px;
+}
+
+.educ {
+  flex: 1 1 300px;
 }
 
 .ghj {

@@ -46,6 +46,7 @@ export default {
 
 <style>
 .footer-area {
+    background-size: cover;
     background-image: url('../assets/footer.webp');
     margin-top: 100px;
     padding: 100px 0;
@@ -56,8 +57,9 @@ export default {
 }
 
 .main {
-    width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 115px auto 0;
 }
 
 .footer {
@@ -69,6 +71,8 @@ export default {
 
 .single-footer {
     width: 230px;
+    padding-top: 30px;
+    margin-top: -30px;
 }
   
 .single-footer:first-child {

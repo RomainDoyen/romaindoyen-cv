@@ -75,7 +75,11 @@ export default {
   padding: 3em 4em;
   margin: 15px;
   border-radius: 10px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #c5c4c4;
+  flex: 1 1 300px;
 }
 
 .cot {
@@ -102,6 +106,7 @@ div.art img {
 .art h4, p {
   font-style: italic;
   margin-bottom: 15px;
+  line-height: 2rem;
 }
 
 .link-projet {
@@ -110,6 +115,7 @@ div.art img {
     padding: 17px;
     border-radius: 10px;
     background-color: #b5b5b5;
+    border: 1px solid #aeaeae;
     font-size: 1vw;
     transition: 0.35s ease-out;
 }

@@ -90,6 +90,7 @@ h1, h2, h3 {
 @media only screen and (max-width: 1210px){
   .main {
     width:320px;
+    margin: 250px auto 0px;
   }
 
   .footer-wave-box {

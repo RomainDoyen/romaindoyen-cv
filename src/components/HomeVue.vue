@@ -131,6 +131,7 @@ div.sous-articles a {
   padding: 17px;
   border-radius: 10px;
   background-color: #d1d1d1;
+  border: 1px solid #c5c4c4;
   font-size: 20px;
   transition: 0.35s ease-out;
   margin-top: 50px;
