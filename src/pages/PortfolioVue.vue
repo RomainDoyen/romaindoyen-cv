@@ -32,7 +32,7 @@ export default {
           description: 'Portfolio de dessins et logo',
           techno: 'React JS, Firebase',
           img: 'dac.webp',
-          link: 'https://designandcreation.netlify.app/'
+          link: 'https://designandcreation.vercel.app/'
         },
         {   
           id: '1',
@@ -40,6 +40,7 @@ export default {
           description: 'Application de recette créole',
           techno: 'Java, XML, SQLite',
           img: 'dc.webp',
+          link: 'https://github.com/RomainDoyen/DodoCuistoAndroid'
         },
         {
           id: '2',
